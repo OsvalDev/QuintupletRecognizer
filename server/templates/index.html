@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuintupletPrediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body data-theme="dark" class="h-screen w-screen overflow-hidden p-0">
+    <h1 class="text-base-content m-4 mt-0 text-3xl font-semibold ">Quintuplet clasification</h1>
+
+    <div class="flex relative" id="body-container">
+        <aside class="w-1/3 h-[89vh] overflow-auto relative flex justify-center flex-wrap ">
+            <p class="text-primary text-xl font-semibold text-center w-full sticky top-0">Presets</p>
+            <img id="itsuki" src="{{ url_for('static', filename='img/itsukiPreset.jpeg') }}" class="h-60 p-2 rounded-sm hover:bg-neutral hover:cursor-pointer preset">
+            <img id="yotsuba" src="{{ url_for('static', filename='img/yotsubaPreset.jpeg') }}" class="h-60 p-2 rounded-sm hover:bg-neutral hover:cursor-pointer preset">
+            <img id="miku" src="{{ url_for('static', filename='img/mikuPreset.jpeg') }}" class="h-60 p-2 rounded-sm hover:bg-neutral hover:cursor-pointer preset preset">
+            <img id="nino" src="{{ url_for('static', filename='img/ninoPreset.jpeg') }}" class="h-60 p-2 rounded-sm hover:bg-neutral hover:cursor-pointer preset">
+            <img id="ichika" src="{{ url_for('static', filename='img/ichikaPreset.jpeg') }}" class="h-60 p-2 rounded-sm hover:bg-neutral hover:cursor-pointer preset">
+        </aside>
+        <div class="flex justify-end">
+            <main class="flex flex-col items-center" id="main">
+                <p class="text-xl" for="pwd">Upload your image</p>   
+                <form enctype="multipart/form-data" class="text-center" id="my-form">
+                    <input
+                        type="file" id="file-input"
+                        class="file-input file-input-bordered file-input-primary w-full max-w-xs my-4 block" />
+            
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </main>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/makePrediction.js') }}"></script>
+</body>
+</html>
