@@ -16,7 +16,7 @@ const pathsResults = {
 const requirePredictionPreset = async (path : string) => {
     try {
         showCurrentImg(path);
-        const response = await fetch('http://localhost:5000/submitPreset', {
+        const response = await fetch(`http://${window.location.hostname}:5000/submitPreset`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ const requirePrediction = async (e : SubmitEvent) => {
             const formData = new FormData();
             formData.append('my_image', imageFile);
     
-            const response = await fetch('http://localhost:5000/submit', {
+            const response = await fetch(`http://${window.location.hostname}:5000/submit`, {
                 method: 'POST',
                 body: formData
             });

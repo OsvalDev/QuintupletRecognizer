@@ -25,7 +25,7 @@ const pathsResults = {
 const requirePredictionPreset = (path) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         showCurrentImg(path);
-        const response = yield fetch('http://localhost:5000/submitPreset', {
+        const response = yield fetch(`http://${window.location.hostname}:5000/submitPreset`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const requirePrediction = (e) => __awaiter(void 0, void 0, void 0, function* () 
             const imageFile = fileInput.files[0];
             const formData = new FormData();
             formData.append('my_image', imageFile);
-            const response = yield fetch('http://localhost:5000/submit', {
+            const response = yield fetch(`http://${window.location.hostname}:5000/submit`, {
                 method: 'POST',
                 body: formData
             });
