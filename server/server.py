@@ -7,11 +7,12 @@ import os
 
 app = Flask(__name__)
 CORS(app)
-dic = ['ichika', 'itsuki', 'miku', 'nino', 'yotsuba']
+# dic = ['ichika', 'itsuki', 'miku', 'nino', 'yotsuba']
+dic = ['asuna', 'chizuru', 'ichika', 'itsuki', 'kaede', 'mai', 'mami', 'miku', 'nino', 'rei', 'ruka', 'serena', 'sumi', 'yotsuba', 'zerotwo']
 
 img_size=(150, 300)
 
-model = load_model('../exportedModels/model(96acc).h5')
+model = load_model('../exportedModels/modelFeatureMaps.h5')
 
 model.make_predict_function()
 

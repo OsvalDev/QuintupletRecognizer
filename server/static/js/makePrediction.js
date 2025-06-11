@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -20,9 +19,19 @@ const pathsResults = {
     yotsuba: 'static/img/yotsubaDefault.webp',
     miku: 'static/img/mikuDefault.webp',
     nino: 'static/img/ninoDefault.webp',
-    ichika: 'static/img/ichikaDefault.webp'
+    ichika: 'static/img/ichikaDefault.webp',
+    asuna: 'static/img/asunaDefault.jpg',
+    chizuru: 'static/img/chizuruDefault.jpg',
+    zerotwo: 'static/img/zerotwoDefault.png',
+    kaede: 'static/img/kaedeDefault.jpg',
+    mai: 'static/img/maiDefault.jpg',
+    mami: 'static/img/mamiDefault.jpg',
+    rei: 'static/img/reiDefault.jpg',
+    ruka: 'static/img/rukaDefault.jpg',
+    serena: 'static/img/serenaDefault.jpg',
+    sumi: 'static/img/sumiDefault.webp'
 };
-const requirePredictionPreset = (path) => __awaiter(void 0, void 0, void 0, function* () {
+const requirePredictionPreset = (path) => __awaiter(this, void 0, void 0, function* () {
     try {
         showCurrentImg(path);
         const response = yield fetch(`http://${window.location.hostname}:5000/submitPreset`, {
@@ -46,7 +55,7 @@ const requirePredictionPreset = (path) => __awaiter(void 0, void 0, void 0, func
         console.error('Request failed', error);
     }
 });
-const requirePrediction = (e) => __awaiter(void 0, void 0, void 0, function* () {
+const requirePrediction = (e) => __awaiter(this, void 0, void 0, function* () {
     e.preventDefault();
     try {
         const fileInput = document.getElementById('file-input');

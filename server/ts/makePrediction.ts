@@ -10,7 +10,17 @@ const pathsResults = {
     yotsuba: 'static/img/yotsubaDefault.webp',
     miku: 'static/img/mikuDefault.webp',
     nino: 'static/img/ninoDefault.webp',
-    ichika: 'static/img/ichikaDefault.webp'
+    ichika: 'static/img/ichikaDefault.webp',
+    asuna: 'static/img/asunaDefault.jpg',
+    chizuru: 'static/img/chizuruDefault.jpg',
+    zerotwo: 'static/img/zerotwoDefault.png',
+    kaede: 'static/img/kaedeDefault.jpg',
+    mai: 'static/img/maiDefault.jpg',
+    mami: 'static/img/mamiDefault.jpg',
+    rei: 'static/img/reiDefault.jpg',
+    ruka: 'static/img/rukaDefault.jpg',
+    serena: 'static/img/serenaDefault.jpg',
+    sumi: 'static/img/sumiDefault.webp'
 }
 
 const requirePredictionPreset = async (path : string) => {
